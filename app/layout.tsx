@@ -9,6 +9,8 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Gametroy - Play Your Favorite Games Online",
   description: "Play thousands of free online games. Action, puzzle, sports, racing and more. No downloads required.",
+  icons: {
+    icon: "/images/logo.png",}
 }
 
 export default function RootLayout({
