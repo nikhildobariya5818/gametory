@@ -7,9 +7,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Pokii Game - Play Your Favorite Games Online",
+  title: "Gametroy - Play Your Favorite Games Online",
   description: "Play thousands of free online games. Action, puzzle, sports, racing and more. No downloads required.",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({

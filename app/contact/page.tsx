@@ -79,9 +79,9 @@ export default function ContactPage() {
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-white/80 dark:text-white/80 light:text-gray-600 mb-2">General Inquiries:</p>
-              <p className="text-yellow-400 mb-4">support@pokiigame.com</p>
+              <p className="text-yellow-400 mb-4">support@gametroy.com</p>
               <p className="text-white/80 dark:text-white/80 light:text-gray-600 mb-2">Business:</p>
-              <p className="text-yellow-400">business@pokiigame.com</p>
+              <p className="text-yellow-400">business@gametroy.com</p>
             </CardContent>
           </Card>
 
@@ -200,7 +200,7 @@ export default function ContactPage() {
                   <strong className="text-yellow-400">Account Problems:</strong> Check our FAQ section first
                 </p>
                 <p>
-                  <strong className="text-yellow-400">Partnership:</strong> Use business@pokiigame.com for faster
+                  <strong className="text-yellow-400">Partnership:</strong> Use business@gametroy.com for faster
                   response
                 </p>
                 <p>
