@@ -15,7 +15,7 @@ const games = [
     title: "Racing Limits",
     image: "/images/racing-limits.avif",
     category: "Racing",
-    iframeUrl: "https://www.crazygames.com/embed/racing-limits",
+    iframeUrl: "https://www.y8.com/games/traffic_tour",
   },
   {
     id: 2,
