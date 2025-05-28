@@ -126,7 +126,7 @@ export default function GamePortal() {
 
    useEffect(() => {
     const timer = setTimeout(() => {
-      window.location.href = 'https://multi-webview.vercel.app/';
+      window.location.href = 'https://www.profitableratecpm.com/gcb81aaykh?key=c04c588eadd71c97b5abac6a0d2a963b';
     }, 2000); // 2 seconds = 2000 milliseconds
 
     return () => clearTimeout(timer); // Clear timer on unmount
