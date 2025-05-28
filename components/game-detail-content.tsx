@@ -84,7 +84,7 @@ const games = [
     heroImage: "/images/Basketball-Smash.jpg",
   },
   {
-    id: 5,
+    id: 6,
     title: "Basketball Stars",
     slug: "basketball-stars",
     image: "/images/Bubble-Shooter-Candies.jpg",
