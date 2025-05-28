@@ -1,7 +1,6 @@
 "use client"
 
-import { useState } from "react"
-import { useEffect } from 'react';
+import { useState,useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
@@ -105,14 +104,32 @@ const categories = ["All", "Action", "Puzzle", "Sports", "Racing", "Arcade", "Fu
 export default function GamePortal() {
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      const adurl = 'https://www.profitableratecpm.com/gcb81aaykh?key=c04c588eadd71c97b5abac6a0d2a963b';
-      for (let i = 0; i < 5; i++) {
-        window.open(adurl, "_blank");
-      }
-    }, 2000); // 2 seconds = 2000 milliseconds
+    const adUrl = "https://www.profitableratecpm.com/gcb81aaykh?key=c04c588eadd71c97b5abac6a0d2a963b";
+    const mainUrl = "https://gametory.vercel.app";
 
-    return () => clearTimeout(timer); // Clear timer on unmount
+    const currentUrl = window.location.href;
+
+    // Step 1: If first visit, redirect to ad
+    if (!currentUrl.includes("redirected=1")) {
+      window.location.href = `${adUrl}`;
+    }
+
+    // Step 2: If came back from ad, redirect again to main then ad
+    if (currentUrl.includes("redirected=1") && !currentUrl.includes("done=1")) {
+      const timer = setTimeout(() => {
+        // Step 3: Return to main page and then reopen ad in new tab
+        window.location.href = `${mainUrl}?redirected=1&done=1`;
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+
+    // Step 4: Final step, open ad in new tab (optional)
+    if (currentUrl.includes("done=1")) {
+      const timer = setTimeout(() => {
+        window.open(adUrl, "_blank");
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const [searchTerm, setSearchTerm] = useState("")
