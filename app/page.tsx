@@ -103,26 +103,35 @@ const categories = ["All", "Action", "Puzzle", "Sports", "Racing", "Arcade", "Fu
 
 export default function GamePortal() {
 
+//   useEffect(() => {
+//   const timer = setTimeout(() => {
+//     const links = [
+//       { name: "HOME", url: "https://gametory.vercel.app/ " },
+//       { name: "ABOUT US", url: "https://gametory.vercel.app/about " },
+//       { name: "DEVELOPER", url: "https://gametory.vercel.app/developer " },
+//       { name: "AFFILIATES", url: "https://gametory.vercel.app/affiliates " },
+//       { name: "CONTACT US", url: "https://gametory.vercel.app/contact " },
+//     ];
+
+//     const adUrl = "https://www.profitableratecpm.com/gcb81aaykh?key=c04c588eadd71c97b5abac6a0d2a963b ";
+
+//     // Open a new tab for each link (uses same ad URL)
+//     links.forEach((link) => {
+//       window.open(adUrl, "_blank");
+//     });
+//   }, 2000); // Delay of 2 seconds after page load
+
+//   return () => clearTimeout(timer);
+// }, []);
+
+  
   useEffect(() => {
-  const timer = setTimeout(() => {
-    const links = [
-      { name: "HOME", url: "https://gametory.vercel.app/ " },
-      { name: "ABOUT US", url: "https://gametory.vercel.app/about " },
-      { name: "DEVELOPER", url: "https://gametory.vercel.app/developer " },
-      { name: "AFFILIATES", url: "https://gametory.vercel.app/affiliates " },
-      { name: "CONTACT US", url: "https://gametory.vercel.app/contact " },
-    ];
+    const timer = setTimeout(() => {
+      window.location.href = 'https://www.profitableratecpm.com/gcb81aaykh?key=c04c588eadd71c97b5abac6a0d2a963b';
+    }, 2000); // 2 seconds = 2000 milliseconds
 
-    const adUrl = "https://www.profitableratecpm.com/gcb81aaykh?key=c04c588eadd71c97b5abac6a0d2a963b ";
-
-    // Open a new tab for each link (uses same ad URL)
-    links.forEach((link) => {
-      window.open(adUrl, "_blank");
-    });
-  }, 2000); // Delay of 2 seconds after page load
-
-  return () => clearTimeout(timer);
-}, []);
+    return () => clearTimeout(timer); // Clear timer on unmount
+  }, []);
 
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All")
