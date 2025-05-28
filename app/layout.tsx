@@ -48,7 +48,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Pokii Game - Play Your Favorite Games Online",
+  title: "GameTory - Play Your Favorite Games Online",
   description: "Play thousands of free online games. Action, puzzle, sports, racing and more. No downloads required.",
   icons: {
     icon: "/images/logo.png",
