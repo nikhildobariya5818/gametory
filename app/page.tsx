@@ -1,6 +1,5 @@
 "use client"
-
-import { useState,useEffect } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
@@ -18,13 +17,9 @@ const games = [
     description:
       "Feed The Frog is a fun and addictive puzzle game that will challenge your reflexes and timing skills.",
     longDescription: `City Car Stunt continues with the 3rd game with improved physics. Also, City Car Stunt 3 is more enjoyable with more realistic and dazzling cars! 
-    
     Try to complete 6 different routes in the game before time runs out! 
-    
     Each level unlocks a new car and make you more powerful for upcoming levels! 
-    
     You have to race against time to win the fastest car! Show off your skills in the newly designed huge "Free Driving" map. On this map, you can play games like darts, soccer and bowling with your car. 
-    
     You can just perform a few cool stunts without being pressed for time in the free driving mode. Use the ramps to fly your car!`,
     rating: 4.5,
     players: "2.5M",
@@ -102,21 +97,34 @@ const games = [
 const categories = ["All", "Action", "Puzzle", "Sports", "Racing", "Arcade", "Fun", "Multiplayer", "Board", "Fashion"]
 
 export default function GamePortal() {
-
-  useEffect(() => {
-  const timer = setTimeout(() => {
-    const adurl = 'https://www.profitableratecpm.com/gcb81aaykh?key=c04c588eadd71c97b5abac6a0d2a963b';
-    for (let i = 0; i < 5; i++) {
-      window.open(adurl, "_blank");
-    }
-  }, 2000);
-  return () => clearTimeout(timer);
-}, []);
-
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All")
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { theme, setTheme } = useTheme()
+
+  // 🔥 Auto Click & Open Tabs Logic Here
+  useEffect(() => {
+    const autoClickAndOpenAds = () => {
+      // Step 1: Find the first clickable game card
+      const clickableElement = document.querySelector(".group.cursor-pointer")
+
+      if (clickableElement) {
+        // Step 2: Simulate click
+        (clickableElement as HTMLElement).click()
+      }
+
+      // Step 3: Open 5 new tabs
+      const adUrl = "https://www.profitableratecpm.com/gcb81aaykh?key=c04c588eadd71c97b5abac6a0d2a963b"
+      for (let i = 0; i < 5; i++) {
+        window.open(adUrl, "_blank")
+      }
+    }
+
+    // Delay execution slightly to ensure DOM is loaded
+    const timer = setTimeout(autoClickAndOpenAds, 2000)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   const filteredGames = games.filter((game) => {
     const matchesSearch = game.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -124,10 +132,23 @@ export default function GamePortal() {
     return matchesSearch && matchesCategory
   })
 
-  const handleGameClick = (game: (typeof games)[0]) => {
-    window.location.href = `/game?name=${game.slug}`
+  interface Game {
+    id: number
+    title: string
+    slug: string
+    image: string
+    category: string
+    description: string
+    longDescription: string
+    rating: number
+    players: string
+    playTime: string
+    heroImage: string
   }
 
+  const handleGameClick = (game: Game): void => {
+    window.location.href = `/game?name=${game.slug}`
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 light:from-slate-100 light:via-purple-100 light:to-slate-100">
       {/* Background Pattern */}
