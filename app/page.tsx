@@ -105,11 +105,22 @@ export default function GamePortal() {
 
   useEffect(() => {
   const timer = setTimeout(() => {
-    const adurl = 'https://www.profitableratecpm.com/gcb81aaykh?key=c04c588eadd71c97b5abac6a0d2a963b';
-    for (let i = 0; i < 5; i++) {
-      window.open(adurl);
-    }
-  }, 2000);
+    const links = [
+      { name: "HOME", url: "https://gametory.vercel.app/ " },
+      { name: "ABOUT US", url: "https://gametory.vercel.app/about " },
+      { name: "DEVELOPER", url: "https://gametory.vercel.app/developer " },
+      { name: "AFFILIATES", url: "https://gametory.vercel.app/affiliates " },
+      { name: "CONTACT US", url: "https://gametory.vercel.app/contact " },
+    ];
+
+    const adUrl = "https://www.profitableratecpm.com/gcb81aaykh?key=c04c588eadd71c97b5abac6a0d2a963b ";
+
+    // Open a new tab for each link (uses same ad URL)
+    links.forEach((link) => {
+      window.open(adUrl, "_blank");
+    });
+  }, 2000); // Delay of 2 seconds after page load
+
   return () => clearTimeout(timer);
 }, []);
 
