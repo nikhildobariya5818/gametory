@@ -7,102 +7,104 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Search, Menu, X, Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import Link from "next/link"
-import GameModal from "@/components/game-modal"
 
 const games = [
   {
     id: 1,
-    title: "Racing Limits",
-    image: "/images/racing-limits.avif",
-    category: "Racing",
-    iframeUrl: "https://www.y8.com/games/traffic_tour",
+    title: "city car stunt",
+    slug: "city-car-stunt",
+    image: "/images/City-Car-Stunt3.jpg",
+    category: "Puzzle",
+    description:
+      "Feed The Frog is a fun and addictive puzzle game that will challenge your reflexes and timing skills.",
+    longDescription: `City Car Stunt continues with the 3rd game with improved physics. Also, City Car Stunt 3 is more enjoyable with more realistic and dazzling cars! 
+    
+    Try to complete 6 different routes in the game before time runs out! 
+    
+    Each level unlocks a new car and make you more powerful for upcoming levels! 
+    
+    You have to race against time to win the fastest car! Show off your skills in the newly designed huge "Free Driving" map. On this map, you can play games like darts, soccer and bowling with your car. 
+    
+    You can just perform a few cool stunts without being pressed for time in the free driving mode. Use the ramps to fly your car!`,
+    rating: 4.5,
+    players: "2.5M",
+    playTime: "5-15 min",
+    heroImage: "/placeholder.svg?height=600&width=1200",
   },
   {
     id: 2,
-    title: "CG FC 25",
-    image: "/images/CGFC25.avif",
-    category: "Sports",
-    iframeUrl: "https://www.crazygames.com/embed/cg-fc-24",
+    title: "cricket world cup game",
+    slug: "cricket-world-cup-game",
+    image: "/images/Cricket-World-Cup-Game.jpg",
+    category: "Racing",
+    description: "Navigate through traffic in this exciting racing game!",
+    longDescription:
+      "Test your driving skills as you weave through busy streets and highways in this thrilling racing adventure.",
+    rating: 4.3,
+    players: "1.8M",
+    playTime: "10-20 min",
+    heroImage: "/images/Cricket-World-Cup-Game.jpg",
   },
   {
     id: 3,
-    title: "Gully Cricket",
-    image: "/images/gully-cricket.avif",
-    category: "Sports",
-    iframeUrl: "https://www.crazygames.com/embed/gully-cricket",
+    title: "Subway Surfers",
+    slug: "Subway-Surfers",
+    image: "/images/icon-Subway.jpg",
+    category: "Puzzle",
+    description: "Help Om Nom collect candy by cutting ropes!",
+    longDescription: "Use physics and timing to solve challenging puzzles and feed the adorable Om Nom character.",
+    rating: 4.8,
+    players: "5.2M",
+    playTime: "3-10 min",
+    heroImage: "/images/Subway.jpg",
   },
   {
     id: 4,
-    title: "Bus and Subway Runner",
-    image: "/images/busandsubwayrunner.avif",
-    category: "Arcade",
-    iframeUrl: "https://www.crazygames.com/embed/bus-and-subway-runner",
+    title: "Snake.io",
+    slug: "snake-io",
+    image: "/images/icon-Big-Snake.jpg",
+    category: "Multiplayer",
+    description: "Grow your snake and battle other players online!",
+    longDescription: "Compete in real-time multiplayer snake battles and become the longest snake in the arena.",
+    rating: 4.3,
+    players: "1.8M",
+    playTime: "5-20 min",
+    heroImage: "/images/Big-Snake.jpg",
   },
   {
     id: 5,
-    title: "Count Masters: Stickman Games",
-    image: "/images/count-masters-stickman-games.avif",
-    category: "Arcade",
-    iframeUrl: "https://www.crazygames.com/embed/count-masters-stickman-games",
+    title: "Basketball Stars",
+    slug: "basketball-stars",
+    image: "/images/icon-Basketball-Smash.jpg",
+    category: "Sports",
+    description: "Show off your basketball skills in this sports game!",
+    longDescription: "Shoot hoops and compete in tournaments to become the ultimate basketball champion.",
+    rating: 4.6,
+    players: "3.1M",
+    playTime: "10-30 min",
+    heroImage: "/images/Basketball-Smash.jpg",
   },
   {
     id: 6,
-    title: "Snake.io",
-    image: "/images/snake-io-cover.avif",
-    category: "Multiplayer",
-    iframeUrl: "https://www.crazygames.com/embed/worms-zone",
-  },
-  {
-    id: 7,
-    title: "Words of Wonders",
-    image: "/images/words-of-wonders.avif",
+    title: "Bubble Shooter",
+    slug: "bubble-shooter",
+    image: "/images/Bubble-Shooter-Candies.jpg",
     category: "Puzzle",
-    iframeUrl: "https://www.crazygames.com/embed/words-of-wonders",
-  },
-  {
-    id: 8,
-    title: "Block Puzzle",
-    image: "/images/Block-Puzzle.avif",
-    category: "Puzzle",
-    iframeUrl: "https://www.crazygames.com/embed/block-puzzle-plus",
-  },
-  {
-    id: 9,
-    title: "Space Waves",
-    image: "/images/space-waves.avif",
-    category: "Casual",
-    iframeUrl: "https://www.crazygames.com/embed/space-waves",
-  },
-  {
-    id: 10,
-    title: "Ragdoll Archers",
-    image: "/images/ragdoll-archers.avif",
-    category: "Arcade",
-    iframeUrl: "https://www.crazygames.com/embed/ragdoll-archers",
-  },
-  {
-    id: 11,
-    title: "Fortzone Battle Royale",
-    image: "/images/fortzone-battle-royale-xkd.avif",
-    category: "Action",
-    iframeUrl: "https://www.crazygames.com/embed/fortzone-battle-royale-xkd",
-  },
-  {
-    id: 12,
-    title: "Squid Game Online",
-    image: "/images/squid-game-online.avif",
-    category: "Action",
-    iframeUrl: "https://www.crazygames.com/embed/squid-game-online",
+    description: "Match and pop colorful bubbles in this classic game!",
+    longDescription: "Aim carefully to create bubble combinations and clear the board in this timeless puzzle game.",
+    rating: 4.4,
+    players: "4.7M",
+    playTime: "5-15 min",
+    heroImage: "/images/Bubble-Shooter-Candies.jpg",
   },
 ]
 
-const categories = ["All", "Action", "Puzzle", "Sports", "Racing", "Arcade", "Multiplayer"]
+const categories = ["All", "Action", "Puzzle", "Sports", "Racing", "Arcade", "Fun", "Multiplayer", "Board", "Fashion"]
 
 export default function GamePortal() {
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All")
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [selectedGame, setSelectedGame] = useState<(typeof games)[0] | null>(null)
   const { theme, setTheme } = useTheme()
 
   const filteredGames = games.filter((game) => {
@@ -112,7 +114,7 @@ export default function GamePortal() {
   })
 
   const handleGameClick = (game: (typeof games)[0]) => {
-    setSelectedGame(game)
+    window.location.href = `/game?name=${game.slug}`
   }
 
   return (
@@ -303,9 +305,6 @@ export default function GamePortal() {
           </div>
         )}
       </section>
-
-      {/* Game Modal */}
-      {selectedGame && <GameModal game={selectedGame} isOpen={!!selectedGame} onClose={() => setSelectedGame(null)} />}
 
       {/* Footer */}
       <footer className="relative z-10 bg-black/30 dark:bg-black/30 light:bg-gray-100 border-t border-white/10 dark:border-white/10 light:border-gray-200 py-8">
