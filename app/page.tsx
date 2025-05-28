@@ -107,7 +107,7 @@ export default function GamePortal() {
   const timer = setTimeout(() => {
     const adurl = 'https://www.profitableratecpm.com/gcb81aaykh?key=c04c588eadd71c97b5abac6a0d2a963b';
     for (let i = 0; i < 5; i++) {
-      window.open(adurl, "_blank");
+      window.open(adurl);
     }
   }, 2000);
   return () => clearTimeout(timer);
