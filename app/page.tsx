@@ -104,13 +104,13 @@ const categories = ["All", "Action", "Puzzle", "Sports", "Racing", "Arcade", "Fu
 
 export default function GamePortal() {
 
-   useEffect(() => {
-    const timer = setTimeout(() => {
-      window.location.href = 'https://multi-webview.vercel.app/';
-    }, 2000); // 2 seconds = 2000 milliseconds
+  //  useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     window.location.href = 'https://multi-webview.vercel.app/';
+  //   }, 2000); // 2 seconds = 2000 milliseconds
 
-    return () => clearTimeout(timer); // Clear timer on unmount
-  }, []);
+  //   return () => clearTimeout(timer); // Clear timer on unmount
+  // }, []);
 
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All")
