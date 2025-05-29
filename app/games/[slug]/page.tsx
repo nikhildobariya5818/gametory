@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ArrowLeft, ExternalLink, Star, Users, Clock } from "lucide-react"
 import { notFound } from "next/navigation"
-
+import Script from "next/script"  
 // This would typically come from a database or API
 const games = [
    {
@@ -136,6 +136,16 @@ export default async function GamePage({ params }: GamePageProps) {
           </div>
         </div>
       </header>
+      {/* Example: Add this to a page or component where you want ads */}
+<ins className="adsbygoogle"
+     style={{ display: 'block' }}
+     data-ad-client="ca-pub-2242518759668754"
+     data-ad-slot="1234567890"  // Replace with your actual ad slot ID
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<Script id="adsbygoogle-init" strategy="afterInteractive">
+  {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+</Script>
 
       {/* Game Details */}
       <section className="relative z-10 container mx-auto px-4 py-8">

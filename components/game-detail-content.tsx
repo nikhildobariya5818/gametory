@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Star, Users, Clock } from "lucide-react"
 import { notFound } from "next/navigation"
+import Script from "next/script"
 
 // This would typically come from a database or API
 const games = [
@@ -155,6 +156,17 @@ export default function GameDetailContent() {
           </div>
         </div>
       </header>
+
+      {/* Example: Add this to a page or component where you want ads */}
+<ins className="adsbygoogle"
+     style={{ display: 'block' }}
+     data-ad-client="ca-pub-2242518759668754"
+     data-ad-slot="1234567890"  // Replace with your actual ad slot ID
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<Script id="adsbygoogle-init" strategy="afterInteractive">
+  {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+</Script>
 
       {/* Hero Section */}
       <section

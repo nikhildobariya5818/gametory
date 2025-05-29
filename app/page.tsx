@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Search, Menu, X, Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import Link from "next/link"
+import Script from "next/script"
 
 const games = [
   {
@@ -130,6 +131,16 @@ export default function GamePortal() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 light:from-slate-100 light:via-purple-100 light:to-slate-100">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100')] opacity-5"></div>
+      {/* Example: Add this to a page or component where you want ads */}
+<ins className="adsbygoogle"
+     style={{ display: 'block' }}
+     data-ad-client="ca-pub-2242518759668754"
+     data-ad-slot="1234567890"  // Replace with your actual ad slot ID
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<Script id="adsbygoogle-init" strategy="afterInteractive">
+  {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+</Script>
 
       {/* Header */}
       <header className="relative z-10 bg-black/20 dark:bg-black/20 light:bg-white/80 backdrop-blur-sm border-b border-white/10 dark:border-white/10 light:border-gray-200">
